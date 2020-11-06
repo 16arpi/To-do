@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">To do</string>
+    <string name="add_memo">Ajouter</string>
+    <string name="edit_memo">Modifier</string>
+    <string name="edit_save">Enregistrer</string>
+    <string name="edit_delete">Supprimer</string>
+    <string name="help_memo">Aide</string>
+    <string name="action_back">Retour</string>
+    <string name="indicator_title">Tâche</string>
+    <string name="indicator_line">Lignes</string>
+    <string name="indicator_title_title">Titre</string>
+    <string name="indicator_content">Ajouter des détails</string>
+    <string name="no_title">Aucun titre</string>
+    <string name="letter_delete">S</string>
+    <string name="letter_save">E</string>
+    <string name="indicator_theme_changed">Thème mis à jour</string>
+    <string name="indicator_saved_note">Mémo enregistré</string>
+    <string name="indicator_disclaimer">Avertissement</string>
+
+    <string name="confirm_message">Supprimer la tâche ?</string>
+    <string name="confirm_message2">Supprimer toutes les tâches effectuées ?</string>
+    <string name="confirm_cancel">Annuler</string>
+    <string name="confirme_ok">Ok</string>
+
+    <!-- HELP -->
+    <string name="help_theme" >Changer de liste</string>
+    <string name="help_abdc">Changer le titre de la liste</string>
+    <string name="help_longpress">appui long</string>
+    <string name="help_save">Enregistrer le mémo</string>
+    <string name="help_delete">Supprimer les tâches effectuées</string>
+    <string name="help_delete_one">Supprimer la tâche</string>
+    <string name="help_close">Fermer la fenêtre</string>
+    <string name="help_website">Noter To do</string>
+    <string name="help_website_p">Vous aimez cette application ? N\'hésitez pas à laisser une note et votre avis sur le Google Play ! Merci beaucoup :)</string>
+    <string name="help_website_btn">Noter l\'appli</string>
+    <string name="help_ratp_disclaimer1">L\'ensemble des éléments graphiques de cette application sont la propriété de la Régie Autonome des Transports Parisiens.</string>
+    <string name="help_ratp_disclaimer2">M et T sont des marques de la RATP. Sous réserve de disponibilité, les logotypes de la RATP sont téléchargeables et exploitables gratuitement à partir du site http://data.ratp.fr dans les conditions visées au sein de celui-ci.</string>
+    <string name="help_promo_livrary_title">Bibliothèque</string>
+    <string name="help_promo_livrary_p">Organisez votre bibliothèque facilement avec l\'application Bilbiothèque !</string>
+    <string name="help_promo_livrary_btn">Télécharger</string>
+
+    <string name="markdown_settings">Utiliser le langage Markdown</string>
+</resources>

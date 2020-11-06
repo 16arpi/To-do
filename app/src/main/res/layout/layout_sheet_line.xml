@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutLines"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/laySheetLigne1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/bm1"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_m1"
+            android:backgroundTint="@null"
+            android:text="1"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m2"
+            android:backgroundTint="@null"
+            android:text="2"
+            android:textColor="@color/textColorWhite"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm3"
+            app:layout_constraintStart_toEndOf="@+id/bm1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm3"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m3"
+            android:backgroundTint="@null"
+            android:text="3"
+            android:textColor="@color/textColorWhite"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm4"
+            app:layout_constraintStart_toEndOf="@+id/bm2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm4"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m4"
+            android:backgroundTint="@null"
+            android:text="4"
+            android:textColor="@color/textColorWhite"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm5"
+            app:layout_constraintStart_toEndOf="@+id/bm3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm5"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_m5"
+            android:backgroundTint="@null"
+            android:text="5"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bm4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/laySheetLigne2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laySheetLigne1">
+
+        <TextView
+            android:id="@+id/bm6"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_m6"
+            android:backgroundTint="@null"
+            android:text="6"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm7"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m7"
+            android:backgroundTint="@null"
+            android:text="7"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm8"
+            app:layout_constraintStart_toEndOf="@+id/bm6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm8"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m8"
+            android:backgroundTint="@null"
+            android:text="8"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm9"
+            app:layout_constraintStart_toEndOf="@+id/bm7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm9"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m9"
+            android:backgroundTint="@null"
+            android:text="9"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm10"
+            app:layout_constraintStart_toEndOf="@+id/bm8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm10"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_m10"
+            android:backgroundTint="@null"
+            android:text="10"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bm9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/laySheetLigne3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laySheetLigne2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/bm11"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_m11"
+            android:backgroundTint="@null"
+            android:text="11"
+            android:textColor="@color/textColorWhite"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm12"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m12"
+            android:backgroundTint="@null"
+            android:text="12"
+            android:textColor="@color/textColorWhite"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm13"
+            app:layout_constraintStart_toEndOf="@+id/bm11"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm13"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m13"
+            android:backgroundTint="@null"
+            android:text="13"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm14"
+            app:layout_constraintStart_toEndOf="@+id/bm12"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm14"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/ic_m14"
+            android:backgroundTint="@null"
+            android:text="14"
+            android:textColor="@color/textColorWhite"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toStartOf="@+id/bm15"
+            app:layout_constraintStart_toEndOf="@+id/bm13"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bm15"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="18dp"
+            android:alpha="0"
+            android:background="@drawable/circle_rer"
+            android:backgroundTint="@null"
+            android:text="M"
+            android:textColor="@color/ratp_blue"
+            android:textSize="26sp"
+            android:theme="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bm14"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
