@@ -23,7 +23,7 @@
     <string name="confirme_ok">Ok</string>
 
     <!-- HELP -->
-    <string name="help_theme" >Changer de liste</string>
+    <string name="help_theme">Changer de liste</string>
     <string name="help_abdc">Changer le titre de la liste</string>
     <string name="help_longpress">appui long</string>
     <string name="help_save">Enregistrer le mémo</string>
@@ -38,6 +38,22 @@
     <string name="help_promo_livrary_title">Bibliothèque</string>
     <string name="help_promo_livrary_p">Organisez votre bibliothèque facilement avec l\'application Bilbiothèque !</string>
     <string name="help_promo_livrary_btn">Télécharger</string>
-
     <string name="markdown_settings">Utiliser le langage Markdown</string>
+
+    <string name="intro_welcome_t">Bienvenue !</string>
+    <string name="intro_welcome_m">Merci d\'avoir installé To do ! Petite introduction pour comprendre le fonctionnement de l\'application</string>
+    <string name="intro_add_t">Ajouter une tâche</string>
+    <string name="intro_add_m">Cliquez sur « Ajouter » en bas de l\'écran</string>
+    <string name="intro_deletesingle_t">Supprimer une tâche</string>
+    <string name="intro_deletesingle_m">Appuyez longtemps sur la puce de la tâche</string>
+    <string name="intro_edit_t">Modifier la tâche</string>
+    <string name="intro_edit_m">Cliquez sur une tâche pour la renommer et éditer ses détails</string>
+    <string name="intro_deleteall_t">Supprimer toutes les tâches effectuées</string>
+    <string name="intro_deleteall_m">Cliquez sur la croix rouge pour supprimer toutes les tâches effectuées</string>
+    <string name="intro_listechange_t">Changer de liste</string>
+    <string name="intro_listechange_m1">Cliquez sur l\'indicateur de la ligne de métro. Vous avez accès à 14 listes, chacune correspondant à une ligne du métro parisien !</string>
+    <string name="intro_edittitle_t">Titre de la liste</string>
+    <string name="intro_edittitle_m">Vous pouvez changer le titre d\'une liste en cliquant dessus</string>
+    <string name="intro_starting_t">Tout est bon</string>
+    <string name="intro_starting_m">To do n\'a maintenant plus de secret pour vous. Bonne utilisation !</string>
 </resources>

@@ -22,7 +22,7 @@
             android:background="@android:color/transparent"
             android:ems="10"
             android:hint="@string/indicator_title"
-            android:inputType="textPersonName|textCapSentences"
+            android:inputType="textPersonName|textCapSentences|textMultiLine"
             android:padding="8dp"
             android:paddingBottom="8dp"
             android:textAppearance="@android:style/TextAppearance.Material.Body1"

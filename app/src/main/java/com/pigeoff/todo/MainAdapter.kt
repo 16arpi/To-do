@@ -1,5 +1,6 @@
 package com.pigeoff.todo
 
+import android.content.Context
 import android.content.DialogInterface
 import android.graphics.Paint
 import android.view.LayoutInflater
@@ -12,13 +13,14 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.pigeoff.todo.db.RmDB
 import com.pigeoff.todo.db.RmTask
 import kotlinx.android.synthetic.main.recycler_list.view.*
 
 
-class MainAdapter(private val context: MainActivity, private var notesList: List<RmTask>?, private var metro: MetroTheme.MetroBuilder, private val db: RmDB) :
+class MainAdapter(private val context: Context, private val notesList: List<RmTask>?, private var metro: MetroTheme.MetroBuilder, private val db: RmDB) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var allNotes = notesList
@@ -86,7 +88,8 @@ class MainAdapter(private val context: MainActivity, private var notesList: List
 
         holder.linearList.setOnClickListener {
             val bttmDialog = BottomSheetDialog(context)
-            val bttmLayout = context.layoutInflater.inflate(R.layout.layout_sheet_add, null)
+            val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val bttmLayout = inflater.inflate(R.layout.layout_sheet_add, null)
             val editTitre = bttmLayout.findViewById<EditText>(R.id.editTextTask)
             editTitre.setText(note!!.titre)
             val btnDelete = bttmLayout.findViewById<Button>(R.id.metroIndicDelete)

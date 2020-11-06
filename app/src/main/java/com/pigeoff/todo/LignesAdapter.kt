@@ -7,12 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.pigeoff.todo.db.RmDB
 import kotlinx.android.synthetic.main.recycler_lines.view.*
 
-class LignesAdapter(private val context: MainActivity, private val sheet: BottomSheetDialog) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class LignesAdapter(private val context: Context, private val parentFragment: Fragment, private val sheet: BottomSheetDialog) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var lignes: MutableList<Int> = mutableListOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
 
     val VIEW_TOP = 0
@@ -63,8 +64,10 @@ class LignesAdapter(private val context: MainActivity, private val sheet: Bottom
                 }
 
                 ligneContainer.setOnClickListener {
-                    context.metroId = metro.id
-                    context.configTheme(metro, context.recyclerView)
+                    parentFragment as ChecklistFragment
+                    //parentFragment.metroId = metro.id
+                    //parentFragment.configTheme(metro, parentFragment.recyclerView)
+                    parentFragment.mListChangeListener?.onListChangeListener(metro.id)
                     sheet.dismiss()
                 }
             }
