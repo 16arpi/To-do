@@ -6,15 +6,14 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -50,8 +49,8 @@ class ChecklistFragment(private var metroId: Int, private var db: RmDB): Fragmen
         val titre: TextView = requireView().textView
         val recyclerView = view.recyclerView
         val addBtn: TextView = view.textAddNote
-        val clearBtn: TextView = view.btnClear
-        val helpBtn: TextView = view.btnHelp
+        val clearBtn: ImageButton = view.btnClear
+        val helpBtn: ImageButton = view.btnHelp
         val leftLine = view.leftLine
         val metroIndic = view.metroIndic
         val ligneIndic = view.ligneIndic
@@ -92,7 +91,11 @@ class ChecklistFragment(private var metroId: Int, private var db: RmDB): Fragmen
             bttmLayout.findViewById<Button>(R.id.metroIndic).setOnClickListener {
                 val lignesSettings = LignesSettings()
                 lignesSettings.setTitle(requireContext(), metroId, editTitre.text.toString())
-                titre.setText(editTitre.text.toString())
+                val newTitle = editTitre.text.toString()
+                if (newTitle.isNotEmpty())
+                    titre.setText(newTitle)
+                else
+                    titre.setText(requireContext().getString(R.string.app_name))
                 dialog.dismiss()
             }
 
@@ -100,7 +103,11 @@ class ChecklistFragment(private var metroId: Int, private var db: RmDB): Fragmen
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     val lignesSettings = LignesSettings()
                     lignesSettings.setTitle(requireContext(), metroId, editTitre.text.toString())
-                    titre.setText(editTitre.text.toString())
+                    val newTitle = editTitre.text.toString()
+                    if (newTitle.isNotEmpty())
+                        titre.setText(newTitle)
+                    else
+                        titre.setText(requireContext().getString(R.string.app_name))
                     dialog.dismiss()
                 }
                 false
@@ -175,9 +182,25 @@ class ChecklistFragment(private var metroId: Int, private var db: RmDB): Fragmen
                 })
                 .show()
         }
+
+        val anchor = view.findViewById<View>(R.id.anchorMenu)
         helpBtn.setOnClickListener {
-            val intent = Intent(requireContext(), HelpActivity::class.java)
-            startActivity(intent)
+            val popupMenu = PopupMenu(context, anchor, Gravity.END)
+            popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
+            popupMenu.show()
+
+            popupMenu.setOnMenuItemClickListener {
+                when (it.itemId) {
+                    R.id.menu_main_about -> {
+                        val intent = Intent(requireContext(), HelpActivity::class.java)
+                        startActivity(intent)
+                        true
+                    }
+                    else -> {
+                        false
+                    }
+                }
+            }
         }
 
         val themeClickListener = View.OnClickListener {
@@ -197,8 +220,6 @@ class ChecklistFragment(private var metroId: Int, private var db: RmDB): Fragmen
         metroIndic.setOnClickListener(themeClickListener)
 
     }
-
-    fun configTheme(metro: MetroTheme.MetroBuilder, recyclerView: RecyclerView?) {}
 
     fun updateData(recyclerView: RecyclerView?) {
         val currentAdapter = recyclerView?.adapter as MainAdapter

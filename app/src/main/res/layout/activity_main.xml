@@ -16,6 +16,17 @@
         app:layout_constraintStart_toStartOf="@+id/recyclerView"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/anchorMenu"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -58,7 +69,6 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
                 android:background="#000"
                 android:gravity="center_vertical"
                 android:paddingLeft="4dp"
@@ -69,41 +79,36 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textColor="#fff"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/metroIndic"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/metroIndic"
+            <ImageButton
+                android:id="@+id/btnClear"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="6dp"
-                android:background="@drawable/circle_rer"
-                android:text="M"
-                android:textColor="#050D9E"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:theme="@style/Widget.AppCompat.Button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ligneIndic"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/ligneIndic"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/ic_m1"
-                android:backgroundTint="@null"
-                android:text="1"
-                android:textColor="@color/textColorBlack"
-                android:textSize="18sp"
-                android:theme="@style/Widget.AppCompat.Button"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnHelp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_clear" />
+
+            <ImageButton
+                android:id="@+id/btnHelp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
@@ -176,34 +181,36 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/btnClear"
+                android:id="@+id/metroIndic"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/circle_delete"
-                android:text="✕"
-                android:textColor="@color/rerA"
-                android:textSize="16sp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/circle_rer"
+                android:text="M"
+                android:textColor="#050D9E"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:theme="@style/Widget.AppCompat.Button"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btnHelp"
+                app:layout_constraintEnd_toStartOf="@+id/ligneIndic"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/btnHelp"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/circle_rer"
-                android:text="\?"
-                android:textColor="@color/ratp_blue"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:id="@+id/ligneIndic"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_m1"
+                android:backgroundTint="@null"
+                android:text="1"
+                android:textColor="@color/textColorBlack"
+                android:textSize="18sp"
                 android:theme="@style/Widget.AppCompat.Button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

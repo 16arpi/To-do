@@ -24,6 +24,13 @@ class MainIntroActivity : IntroActivity() {
             .build())
 
         addSlide(SimpleSlide.Builder()
+            .title(R.string.intro_adddetails_t)
+            .description(R.string.intro_adddetails_m)
+            .image(R.drawable.add_help_1)
+            .background(android.R.color.white)
+            .build())
+
+        addSlide(SimpleSlide.Builder()
             .title(R.string.intro_edit_t)
             .description(R.string.intro_edit_m)
             .image(R.drawable.top_help_1)
@@ -47,14 +54,14 @@ class MainIntroActivity : IntroActivity() {
         addSlide(SimpleSlide.Builder()
             .title(R.string.intro_listechange_t)
             .description(R.string.intro_listechange_m1)
-            .image(R.drawable.top_help_4)
+            .image(R.drawable.bttm_help_2)
             .background(android.R.color.white)
             .build())
 
         addSlide(SimpleSlide.Builder()
             .title(R.string.intro_deleteall_t)
             .description(R.string.intro_deleteall_m)
-            .image(R.drawable.bttm_help_2)
+            .image(R.drawable.top_help_4)
             .background(android.R.color.white)
             .build())
 
@@ -63,5 +70,15 @@ class MainIntroActivity : IntroActivity() {
             .description(R.string.intro_starting_m)
             .background(android.R.color.white)
             .build())
+    }
+
+    override fun onStop() {
+        super.onStop()
+        setIntroSet(true)
+    }
+
+    fun setIntroSet(introDone: Boolean) {
+        val prefs = getSharedPreferences("theme", 0)
+        prefs.edit().putBoolean("introdone", introDone).apply()
     }
 }

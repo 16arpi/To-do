@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#000</color>
-    <color name="colorAccent">#00C4B3</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="bgPrimary">#fff</color>
+    <color name="bgPrimaryDark">#102027</color>
     <color name="ratp_vert">#00C4B3</color>
     <color name="ratp_vert_darker">#004433</color>
     <color name="ratp_blue" >#050D9E</color>
     <color name="ratp_blue_disabled" >#99050D9E</color>
+    <color name="ratp_gris_bleu">#37474f</color>
     <color name="textColorWhite">#FFFFFF</color>
     <color name="textColorBlack">#000000</color>
     <color name="textColorBlackDisabled">#66000000</color>

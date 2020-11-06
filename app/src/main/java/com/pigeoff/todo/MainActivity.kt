@@ -19,20 +19,16 @@ class MainActivity : AppCompatActivity() {
             RmDB::class.java, "notes"
         ).allowMainThreadQueries().build()
 
-        val metroId = getMetroID()
-        updateChecklistUI(db, metroId)
-
         if (!getIntroSet()) {
             intent = Intent(this, MainIntroActivity::class.java)
             startActivity(intent)
         }
 
+        val metroId = getMetroID()
+        updateChecklistUI(db, metroId)
+
     }
 
-    override fun onStop() {
-        super.onStop()
-        db.close()
-    }
 
     fun updateChecklistUI(db: RmDB, id: Int) {
         val checklistFragment = ChecklistFragment(id, db)
@@ -69,13 +65,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getIntroSet() : Boolean {
-        val prefs: SharedPreferences = this.getSharedPreferences("theme", 0)
+        val prefs: SharedPreferences = getSharedPreferences("theme", 0)
         val metroId = prefs.getBoolean("introdone", false)
         return metroId
-    }
-
-    fun setIntroSet(introDone: Boolean) {
-        val prefs = this.getSharedPreferences("theme", 0)
-        prefs.edit().putBoolean("introdone", introDone).apply()
     }
 }
