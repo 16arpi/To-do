@@ -1,8 +1,9 @@
-package com.pigeoff.todo
+package com.pigeoff.todo.util
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
+import com.pigeoff.todo.R
 
 
 class MetroTheme {

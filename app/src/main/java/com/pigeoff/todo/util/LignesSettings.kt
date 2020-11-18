@@ -1,4 +1,4 @@
-package com.pigeoff.todo
+package com.pigeoff.todo.util
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -5,16 +5,16 @@ import androidx.room.*
 @Dao
 interface RmTaskDAO {
     @Query("SELECT * FROM RmTask ORDER BY id")
-    fun getAllTasks(): List<RmTask>
+    fun getAllTasks(): MutableList<RmTask>
 
     @Query("SELECT * FROM RmTask WHERE ligne IS :ligne ORDER BY id ")
-    fun getAllTasks(ligne: Int): List<RmTask>
+    fun getAllTasks(ligne: Int): MutableList<RmTask>
 
     @Query("SELECT * FROM RmTask WHERE emergency IS 0 ORDER BY id")
-    fun getAllNonEmerencyTasks() : List<RmTask>
+    fun getAllNonEmerencyTasks() : MutableList<RmTask>
 
     @Query("SELECT * FROM RmTask WHERE emergency IS 1 ORDER BY id")
-    fun getAllEmerencyTasks() : List<RmTask>
+    fun getAllEmerencyTasks() : MutableList<RmTask>
 
     @Query("SELECT * FROM RmTask WHERE id LIKE :id")
     fun getTask(id: Int) : RmTask

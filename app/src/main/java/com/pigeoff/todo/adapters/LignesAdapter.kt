@@ -1,4 +1,4 @@
-package com.pigeoff.todo
+package com.pigeoff.todo.adapters
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -6,11 +6,12 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.pigeoff.todo.db.RmDB
+import com.pigeoff.todo.util.MetroTheme
+import com.pigeoff.todo.R
+import com.pigeoff.todo.fragments.ChecklistFragment
 import kotlinx.android.synthetic.main.recycler_lines.view.*
 
 class LignesAdapter(private val context: Context, private val parentFragment: Fragment, private val sheet: BottomSheetDialog) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -21,9 +22,21 @@ class LignesAdapter(private val context: Context, private val parentFragment: Fr
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType == VIEW_NORMAL)
-            return ViewHolder(LayoutInflater.from(context).inflate(R.layout.recycler_lines, parent, false))
+            return ViewHolder(
+                LayoutInflater.from(context).inflate(
+                    R.layout.recycler_lines,
+                    parent,
+                    false
+                )
+            )
         else {
-            return TopViewHolder(LayoutInflater.from(context).inflate(R.layout.recycler_lines_top, parent, false))
+            return TopViewHolder(
+                LayoutInflater.from(context).inflate(
+                    R.layout.recycler_lines_top,
+                    parent,
+                    false
+                )
+            )
         }
     }
 
@@ -47,7 +60,8 @@ class LignesAdapter(private val context: Context, private val parentFragment: Fr
             }
             VIEW_NORMAL -> {
                 holder as ViewHolder
-                val metro = MetroTheme.MetroBuilder(lignes.get(position))
+                val metro =
+                    MetroTheme.MetroBuilder(lignes.get(position))
                 val ligneNum = holder.ligneNum
                 val ligneTitle = holder.ligneTitle
                 val ligneContainer = holder.ligneContainer
@@ -80,9 +94,7 @@ class LignesAdapter(private val context: Context, private val parentFragment: Fr
         val ligneContainer = view.ligneContainer
     }
 
-    class TopViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-    }
+    class TopViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     fun setTitle(context: Context, numero: Int, title: String) {
         val prefStr = "l"+numero.toString()

@@ -6,14 +6,21 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
 import com.pigeoff.todo.db.RmDB
+import com.pigeoff.todo.fragments.ChecklistFragment
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var db: RmDB
+    private lateinit var checklistFragment: ChecklistFragment
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(null)
+        super.onCreate(savedInstanceState)
+
         db = Room.databaseBuilder(
             applicationContext,
             RmDB::class.java, "notes"
@@ -34,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun updateChecklistUI(db: RmDB, id: Int) {
-        val checklistFragment = ChecklistFragment(id, db)
+        checklistFragment = ChecklistFragment(id, db)
 
         if (supportFragmentManager.findFragmentByTag("checklist") == null) {
             supportFragmentManager.beginTransaction()

@@ -7,6 +7,7 @@
     <string name="help_memo">Aide</string>
     <string name="action_back">Retour</string>
     <string name="indicator_title">Tâche</string>
+    <string name="indicator_title_edit">Titre de la liste</string>
     <string name="indicator_line">Lignes</string>
     <string name="indicator_title_title">Titre</string>
     <string name="indicator_content">Ajouter des détails</string>

@@ -7,7 +7,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
 
         <item name="colorAccent">@color/ratp_vert</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
         <item name="android:popupTheme">@style/PopupMenu</item>
     </style>
 
@@ -30,10 +29,18 @@
     </style>
 
 
-    <style name="DialogStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+    <style name="DialogStyleKeyboard" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="DialogStyleNoKeyboard" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
     </style>
 
 
