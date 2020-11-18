@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var db: RmDB
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(null)
         db = Room.databaseBuilder(
             applicationContext,
             RmDB::class.java, "notes"
@@ -23,10 +23,13 @@ class MainActivity : AppCompatActivity() {
             intent = Intent(this, MainIntroActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         val metroId = getMetroID()
         updateChecklistUI(db, metroId)
-
     }
 
 
